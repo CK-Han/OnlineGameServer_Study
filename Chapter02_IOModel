@@ -1,0 +1,24 @@
+## Ch02 - 온라인 게임 서버 기초
+
+*****
+
+#### 온라인 게임서버를 만드는데 필요한 기초적인 지식들을 학습한다.
+#### 내용이 많아 이론편과 윈도우즈IO모델 두 편으로 나눈다.
+
+> ### 2.4 윈도우즈 I/O 모델
+>>> ![그림2-7_윈도우IO모델.jpg](./images/그림2-7_윈도우IO모델.png)
+>>> <br>하나씩 해당 모델의 장단점 및 고려사항을 알아보자.
+
+>> #### select 모델
+>>> ```angular2html
+>>> int WSAAPI select(
+>>>   int           nfds,
+>>>   fd_set        *readfds,
+>>>   fd_set        *writefds,
+>>>   fd_set        *exceptfds,
+>>>   const timeval *timeout
+>>> );
+>>> ```
+>>> 책에서는 윈도우 소켓 환경에서의 select 모델은 효율이 좋지 않아 설명하지 않는다.
+>>> 간단하게 설명하자면, 
+>>> <br> [참조] :  https://www.joinc.co.kr/w/Site/system_programing/File/select
