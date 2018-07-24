@@ -18,8 +18,8 @@ void main()
 	SOCKADDR_IN addr;
 	::ZeroMemory(&addr, sizeof(addr));
 	addr.sin_family = AF_INET;
-	addr.sin_addr.S_un.S_addr = ADDR_ANY;
-	addr.sin_port = PORT;
+	addr.sin_addr.S_un.S_addr = ::htonl(ADDR_ANY);
+	addr.sin_port = ::htons(PORT);
 
 	::bind(s, (SOCKADDR*)&addr, sizeof(addr));
 	::listen(s, 10);
